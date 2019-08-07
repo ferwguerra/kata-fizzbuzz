@@ -8,6 +8,7 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.List;
 
 import static java.util.Arrays.*;
+import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
 public class FizzBuzzShould {
@@ -39,7 +40,7 @@ public class FizzBuzzShould {
     @Test
     public void convert() {
         String result = fizzBuzz.convert(number);
-        Assert.assertEquals(this.result, result);
+        assertEquals(this.result, result);
     }
 
 }
