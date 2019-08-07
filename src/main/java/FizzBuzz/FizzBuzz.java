@@ -1,20 +1,16 @@
 package FizzBuzz;
 
 public class FizzBuzz {
+
+    private final static String FIZZ = "Fizz";
+    private final static String BUZZ = "Buzz";
+
     public String convert(int number) {
-        String result = String.valueOf(number);
-        boolean isNumberMultipleOfThree = isNumberMultipleOf(number, 3);
-        boolean isNumberMultipleOfFive = isNumberMultipleOf(number, 5);
-        if(isNumberMultipleOfThree) {
-            result = "Fizz";
-        }
-        if(isNumberMultipleOfFive) {
-            result = "Buzz";
-        }
-        if(isNumberMultipleOfThree && isNumberMultipleOfFive) {
-            result = "FizzBuzz";
-        }
-        return result;
+        if(isNumberMultipleOf(number, 15)) return FIZZ + BUZZ;
+        if(isNumberMultipleOf(number, 3)) return FIZZ;
+        if(isNumberMultipleOf(number, 5)) return BUZZ;
+
+        return String.valueOf(number);
     }
 
     private boolean isNumberMultipleOf(int dividend, int divider) {

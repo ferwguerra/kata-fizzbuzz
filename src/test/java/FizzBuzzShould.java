@@ -16,12 +16,12 @@ public class FizzBuzzShould {
     private final int number;
     private final String result;
 
-    FizzBuzz fizzBuzz = new FizzBuzz();
-
     public FizzBuzzShould(int number, String result) {
         this.number = number;
         this.result = result;
     }
+
+    FizzBuzz fizzBuzz = new FizzBuzz();
 
     @Parameters
     public static List<Object[]> data() {
